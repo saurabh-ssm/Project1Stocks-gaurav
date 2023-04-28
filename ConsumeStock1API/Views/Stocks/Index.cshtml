@@ -1,0 +1,26 @@
+﻿@model IEnumerable<Company>
+
+<table>
+    <thead>
+        <tr>
+            <th>Company Name</th>
+            <th>Stock Price</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var company in Model)
+        {
+            <tr>
+                <td>@company.Name</td>
+                <td>@company.StockPrice</td>
+            </tr>
+        }
+    </tbody>
+</table>
+
+<script>
+    setInterval(function () {
+        location.reload();
+    }, 1000);
+
+</script>
